@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "905985862953",
+    "project_id": "rahnuma-cc",
+    "storage_bucket": "rahnuma-cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905985862953:android:e6a829bf56aed5e866db38",
+        "android_client_info": {
+          "package_name": "com.rahnuma.user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "905985862953-ks7k6itq91ac6q1r7kk577sbc2kqfe8f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rahnuma.user",
+            "certificate_hash": "ba9df85a4ecbbb6c624664e971cb132a964bc6b8"
+          }
+        },
+        {
+          "client_id": "905985862953-hr1e9lbrcjln4heg7lgrj94v7719ejj7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpwDsbd5m-rZpi4cM7WnizffLYljiAHhg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "905985862953-hr1e9lbrcjln4heg7lgrj94v7719ejj7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
