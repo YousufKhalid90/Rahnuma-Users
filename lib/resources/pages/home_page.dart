@@ -62,12 +62,9 @@ class _HomePageState extends NyState<HomePage> {
               Text(
                 getEnv("APP_NAME"),
               ).displayMedium(context),
-              Text("Micro-framework for Flutter", textAlign: TextAlign.center)
+              Text("for your mental peace", textAlign: TextAlign.center)
                   .titleMedium(context)
                   .setColor(context, (color) => color.primaryAccent),
-              Text(
-                "Build something amazing 💡",
-              ).bodyMedium(context).alignCenter(),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -95,30 +92,30 @@ class _HomePageState extends NyState<HomePage> {
                         shrinkWrap: true,
                         children: [
                           MaterialButton(
-                            child: Text(
-                              "documentation".tr().capitalize(),
-                            ).bodyLarge(context).setColor(
-                                context, (color) => color.surfaceContent),
+                            // child: Text(
+                            //   "documentation".tr().capitalize(),
+                            // ).bodyLarge(context).setColor(
+                            //     context, (color) => color.surfaceContent),
                             onPressed: widget.controller.onTapDocumentation,
                           ),
                           Divider(
                             height: 0,
                           ),
                           MaterialButton(
-                            child: Text(
-                              "GitHub",
-                            ).bodyLarge(context).setColor(
-                                context, (color) => color.surfaceContent),
+                            // child: Text(
+                            //   "GitHub",
+                            // ).bodyLarge(context).setColor(
+                            //     context, (color) => color.surfaceContent),
                             onPressed: widget.controller.onTapGithub,
                           ),
                           Divider(
                             height: 0,
                           ),
                           MaterialButton(
-                            child: Text(
-                              "changelog".tr().capitalize(),
-                            ).bodyLarge(context).setColor(
-                                context, (color) => color.surfaceContent),
+                            // child: Text(
+                            //   "changelog".tr().capitalize(),
+                            // ).bodyLarge(context).setColor(
+                            //     context, (color) => color.surfaceContent),
                             onPressed: widget.controller.onTapChangeLog,
                           ),
                           Divider(
@@ -136,7 +133,7 @@ class _HomePageState extends NyState<HomePage> {
                     ),
                   ),
                   Text(
-                    "Framework Version: $nyloVersion",
+                    "Rahnuma 2.0",
                   )
                       .bodyMedium(context)
                       .setColor(context, (color) => Colors.grey),
