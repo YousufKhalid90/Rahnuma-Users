@@ -1,8 +1,6 @@
+import 'package:RahnumaUser/resources/pages/home_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/bootstrap/extensions.dart';
-import 'package:flutter_app/resources/pages/home_page.dart';
-import 'package:flutter_app/resources/widgets/logo_widget.dart';
-//import '/app/controllers/login_controller.dart';
+
 import '../../app/events/login_event.dart';
 import '/bootstrap/helpers.dart';
 import '/resources/widgets/safearea_widget.dart';
@@ -48,7 +46,7 @@ class _LoginScreenState extends NyState<LoginScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Logo(),
+              // Logo(),
               TextField(
                 decoration: InputDecoration(
                   labelText: 'Username',
@@ -70,7 +68,8 @@ class _LoginScreenState extends NyState<LoginScreen> {
               ),
               SizedBox(height: 16),
               ElevatedButton(
-                onPressed: dispatchSocialLoginEvent,
+                // onPressed: dispatchSocialLoginEvent,
+                onPressed: bttnpress,
                 child: Text('Google Login'),
               ),
             ],

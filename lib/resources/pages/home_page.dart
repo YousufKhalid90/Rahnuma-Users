@@ -1,15 +1,19 @@
+import 'package:RahnumaUser/bootstrap/extensions.dart';
+import 'package:RahnumaUser/config/AuthService.dart';
+import 'package:RahnumaUser/resources/pages/login_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/resources/pages/login_screen.dart';
+
 import 'package:firebase_auth/firebase_auth.dart';
 // Import the AuthService class
-import 'package:flutter_app/bootstrap/extensions.dart';
-import 'package:flutter_app/config/AuthService.dart';
-import 'package:flutter_app/resources/widgets/logo_widget.dart';
+
+import '../widgets/nav_bar_widget.dart';
+import '../widgets/bottom_sheet_widget.dart';
 import '/app/controllers/home_controller.dart';
 import '/bootstrap/helpers.dart';
 import '/resources/widgets/safearea_widget.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:nylo_framework/theme/helper/ny_theme.dart';
+import '../../app/events/login_event.dart';
 
 class HomePage extends NyStatefulWidget {
   @override
@@ -28,7 +32,8 @@ class _HomePageState extends NyState<HomePage> {
   final AuthService _authService = AuthService();
 
   void _signOut() async {
-    await _authService.googleSignOut();
+    _authService.googleSignOut();
+
     //Navigator.pushReplacementNamed(context, LoginPage.path);
     routeTo(LoginScreen.path);
     // Perform any additional actions after signing out
@@ -39,26 +44,27 @@ class _HomePageState extends NyState<HomePage> {
     super.init();
   }
 
+  void _showBottomSheet(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return MyBottomSheet();
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Hello World".tr()),
-        centerTitle: true,
-        actions: [
-          IconButton(
-            onPressed: widget.controller.showAbout,
-            icon: Icon(Icons.info_outline),
-          ),
-        ],
-      ),
+      appBar: AppBar(),
+      drawer: NavBar(),
       body: SafeAreaWidget(
         child: Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Logo(),
+              // Logo(),
               Text(
                 getEnv("APP_NAME"),
               ).displayMedium(context),
@@ -150,8 +156,10 @@ class _HomePageState extends NyState<HomePage> {
                   Text("${_darkMode == true ? "Dark" : "Light"} Mode"),
                   SizedBox(height: 20.0),
                   ElevatedButton(
-                    onPressed: _signOut,
-                    child: Text('Sign Out'),
+                    onPressed: () {
+                      _showBottomSheet(context);
+                    },
+                    child: Text('Continue with google'),
                   ),
                 ],
               ),

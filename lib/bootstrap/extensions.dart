@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/bootstrap/helpers.dart';
-import 'package:flutter_app/resources/themes/styles/color_styles.dart';
+import 'package:RahnumaUser/bootstrap/helpers.dart';
+import 'package:RahnumaUser/resources/themes/styles/color_styles.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 /// [Text] Extensions

@@ -16,6 +16,10 @@ class AuthService {
           accessToken: googleSignInAuthentication.accessToken,
           idToken: googleSignInAuthentication.idToken,
         );
+
+        // Print the ID Token
+        print('ID Token: ${googleSignInAuthentication.idToken}');
+
         final UserCredential userCredential =
             await _auth.signInWithCredential(authCredential);
         return userCredential
@@ -28,7 +32,7 @@ class AuthService {
     return null;
   }
 
-  googleSignOut() async {
+  Future<void> googleSignOut() async {
     await _auth.signOut();
     await _googleSignIn.signOut();
   }

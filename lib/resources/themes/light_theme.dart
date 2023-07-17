@@ -24,7 +24,7 @@ ThemeData lightTheme(ColorStyles color) {
     focusColor: color.primaryContent,
     scaffoldBackgroundColor: color.background,
     hintColor: color.primaryAccent,
-    dividerTheme: DividerThemeData(color: Colors.grey[100]),
+    dividerTheme: DividerThemeData(color: Colors.white),
     appBarTheme: AppBarTheme(
       backgroundColor: color.appBarBackground,
       titleTextStyle:

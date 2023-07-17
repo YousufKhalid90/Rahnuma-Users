@@ -1,7 +1,7 @@
-import 'package:flutter_app/config/decoders.dart';
-import 'package:flutter_app/config/design.dart';
-import 'package:flutter_app/config/theme.dart';
-import 'package:flutter_app/config/validation_rules.dart';
+import 'package:RahnumaUser/config/decoders.dart';
+import 'package:RahnumaUser/config/design.dart';
+import 'package:RahnumaUser/config/theme.dart';
+import 'package:RahnumaUser/config/validation_rules.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import '../../config/localization.dart';
 
@@ -25,7 +25,5 @@ class AppProvider implements NyProvider {
   }
 
   @override
-  afterBoot(Nylo nylo) async {
-
-  }
+  afterBoot(Nylo nylo) async {}
 }
